@@ -4,6 +4,7 @@ import com.github.wolrab.swarm.BoidManager;
 import com.github.wolrab.window.Window;
 
 public class Main {
+	// Easy hack to limit frames
 	private static class Timer implements Runnable {
 		@Override
 		public void run() {
@@ -13,18 +14,18 @@ public class Main {
 	}
 	
 	public static void main(String args[]) {
-		// TODO: Initialize the BOIDS
 		BoidManager boidManager = new BoidManager(200);
 		Window window = new Window(boidManager.getBoidsGraphicsComponents());
 		WindowState windowState = new WindowState();
 		
 		// Game Loop
-		while (!windowState.isWindowClosing()) {
+		while (!windowState.isWindowClosing()) { // dumb way of linking my loop to WindowEvents
 			Thread timer = new Thread(new Timer());
 			timer.start();
 			boidManager.update(Config.SECONDS_PER_FRAME);
 			window.repaint();
 			try {
+				// This is where the next state should start updating...
 				timer.join();
 			} catch (InterruptedException e) { }
 		}

@@ -22,7 +22,6 @@ public class DrawSurface extends JPanel {
 	
 	@Override
 	public void paintComponent(Graphics g) {
-		g.clearRect(0, 0, windowWidth, windowHeight); // ?
 		for (int i = 0; i < gc.size(); i++) {
 			gc.get(i).paint(g);
 		}

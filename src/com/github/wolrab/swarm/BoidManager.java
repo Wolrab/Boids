@@ -30,7 +30,7 @@ public class BoidManager {
 		
 		for (int i = 0; i < boidNum; i++) {
 			boidsGraphicsComponents.add((GraphicsComponent) new BoidGraphicsComponent()); // Initialize boidGraphicsComponent with all the defaults
-			neighborhoodCount.add(null);
+			neighborhoodCount.add(null); // Back when I didn't understand ArrayLists, oof
 			cumulativeHeading.add(null);
 			avgPosition.add(null);
 			cumulativeAcceleration.add(null);
@@ -43,6 +43,7 @@ public class BoidManager {
 		this(boidNum, Config.BOID_NEIGHBORHOOD_RADIUS, Config.BOID_REPULSION_CONSTANT);
 	}
 	
+	// The heart of the algo, it sucks really bad
 	public void update(double dt) {
 		resetLists();
 		for (int i = 0; i < boids.size(); i++) {
@@ -76,6 +77,7 @@ public class BoidManager {
 		}
 	}
 	
+	// There MUST be a better way (clone existing lists from memory?)
 	private void resetLists() {
 		for (int i = 0; i < boids.size(); i++) {
 			neighborhoodCount.set(i, 0);

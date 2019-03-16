@@ -25,6 +25,7 @@ public class BoidPhysicsComponent extends PhysicsComponent {
 	public void update(GameObject go, double dt) {
 		go.setAcceleration(squashAcceleration(go.getAcceleration()));
 		Vector2D dv = go.getAcceleration().scale(dt);
+		// Gross, but necessary when you don't have real physics
 		go.setVelocity(squashVelocity(go.getVelocity().add(dv)));
 		
 		Vector2D dp = go.getVelocity().scale(dt);
@@ -33,20 +34,25 @@ public class BoidPhysicsComponent extends PhysicsComponent {
 		collision(go);
 	}
 	
+	// Makes the Boids "bounce" off the walls
 	private void collision(GameObject go) {
 		Vector2D position = go.getPosition();
+		// Left wall
 		if (position.getCoordinates().x < Coordinates.getXMin()) {
 			go.setPosition(new Vector2D(new Point2D(Coordinates.getXMin(), position.getCoordinates().y)));
 			go.setVelocity(reflect(go.getVelocity(), LEFT_SURFACE_NORMAL));
 		}
+		// Right wall
 		else if (position.getCoordinates().x > Coordinates.getXMax()) {
 			go.setPosition(new Vector2D(new Point2D(Coordinates.getXMax(), position.getCoordinates().y)));
 			go.setVelocity(reflect(go.getVelocity(), RIGHT_SURFACE_NORMAL));
 		}
+		// Bottom wall
 		if (position.getCoordinates().y < Coordinates.getYMin()) {
 			go.setPosition(new Vector2D(new Point2D(position.getCoordinates().x, Coordinates.getYMin())));
 			go.setVelocity(reflect(go.getVelocity(), BOTTOM_SURFACE_NORMAL));
 		}
+		// Top wall
 		else if (position.getCoordinates().y > Coordinates.getYMax()) {
 			go.setPosition(new Vector2D(new Point2D(position.getCoordinates().x, Coordinates.getYMax())));
 			go.setVelocity(reflect(go.getVelocity(), TOP_SURFACE_NORMAL));

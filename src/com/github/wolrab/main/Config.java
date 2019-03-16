@@ -1,5 +1,6 @@
 package com.github.wolrab.main;
 
+// A static mess that defines all useful behavior
 public final class Config {
 	// FPS Calculations
 	public static final double FPS = 60.0;
@@ -7,8 +8,8 @@ public final class Config {
 	public static final double MILLIS_PER_FRAME = SECONDS_PER_FRAME * 1000.0;
 	
 	// Coordinates Defaults
-	public static final int DEFAULT_WINDOW_WIDTH = 1600;
-	public static final int DEFAULT_WINDOW_HEIGHT = 800;
+	public static final int DEFAULT_WINDOW_WIDTH = 1200;
+	public static final int DEFAULT_WINDOW_HEIGHT = 600;
 	public static final double DEFAULT_X_MAX = 20.0;
 	public static final double DEFAULT_X_MIN = -20.0;
 	public static final double DEFAULT_Y_MAX = 10.0;
