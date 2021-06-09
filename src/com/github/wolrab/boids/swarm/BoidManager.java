@@ -1,13 +1,13 @@
-package com.github.wolrab.swarm;
+package com.github.wolrab.boids.swarm;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.github.wolrab.components.*;
-import com.github.wolrab.main.Config;
-import com.github.wolrab.math.Point2D;
-import com.github.wolrab.math.Vector2D;
-import com.github.wolrab.swarm.components.*;
+import com.github.wolrab.boids.components.*;
+import com.github.wolrab.boids.main.Config;
+import com.github.wolrab.boids.math.Point2D;
+import com.github.wolrab.boids.math.Vector2D;
+import com.github.wolrab.boids.swarm.components.*;
 
 public class BoidManager {
 	private List<Boid> boids;
@@ -43,7 +43,7 @@ public class BoidManager {
 		this(boidNum, Config.BOID_NEIGHBORHOOD_RADIUS, Config.BOID_REPULSION_CONSTANT);
 	}
 	
-	// The heart of the algo, it sucks really bad
+	// The heart of the algo
 	public void update(double dt) {
 		resetLists();
 		for (int i = 0; i < boids.size(); i++) {

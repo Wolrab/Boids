@@ -1,16 +1,16 @@
-package com.github.wolrab.swarm.components;
+package com.github.wolrab.boids.swarm.components;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Polygon;
 
-import com.github.wolrab.components.GameObject;
-import com.github.wolrab.components.GraphicsComponent;
-import com.github.wolrab.main.Config;
-import com.github.wolrab.math.Coordinates;
-import com.github.wolrab.math.Point2D;
-import com.github.wolrab.math.PointWindow;
-import com.github.wolrab.math.Vector2D;
+import com.github.wolrab.boids.components.GameObject;
+import com.github.wolrab.boids.components.GraphicsComponent;
+import com.github.wolrab.boids.main.Config;
+import com.github.wolrab.boids.math.Coordinates;
+import com.github.wolrab.boids.math.Point2D;
+import com.github.wolrab.boids.math.PointWindow;
+import com.github.wolrab.boids.math.Vector2D;
 
 public class BoidGraphicsComponent extends GraphicsComponent {
 	private PointWindow start, tip, width1, width2;

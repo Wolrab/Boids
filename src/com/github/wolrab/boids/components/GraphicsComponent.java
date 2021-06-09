@@ -1,4 +1,4 @@
-package com.github.wolrab.components;
+package com.github.wolrab.boids.components;
 
 import java.awt.Graphics;
 

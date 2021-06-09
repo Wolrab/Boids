@@ -1,11 +1,11 @@
-package com.github.wolrab.swarm.components;
+package com.github.wolrab.boids.swarm.components;
 
-import com.github.wolrab.components.GameObject;
-import com.github.wolrab.components.PhysicsComponent;
-import com.github.wolrab.main.Config;
-import com.github.wolrab.math.Coordinates;
-import com.github.wolrab.math.Point2D;
-import com.github.wolrab.math.Vector2D;
+import com.github.wolrab.boids.components.GameObject;
+import com.github.wolrab.boids.components.PhysicsComponent;
+import com.github.wolrab.boids.main.Config;
+import com.github.wolrab.boids.math.Coordinates;
+import com.github.wolrab.boids.math.Point2D;
+import com.github.wolrab.boids.math.Vector2D;
 
 public class BoidPhysicsComponent extends PhysicsComponent {
 	public BoidPhysicsComponent(double maxVelocity, double maxAcceleration) {

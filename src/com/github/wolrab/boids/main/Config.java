@@ -1,4 +1,4 @@
-package com.github.wolrab.main;
+package com.github.wolrab.boids.main;
 
 // A static mess that defines all useful behavior
 public final class Config {

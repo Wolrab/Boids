@@ -1,10 +1,10 @@
-package com.github.wolrab.swarm;
+package com.github.wolrab.boids.swarm;
 
 import java.util.Random;
 
-import com.github.wolrab.components.*;
-import com.github.wolrab.main.Config;
-import com.github.wolrab.math.*;
+import com.github.wolrab.boids.components.*;
+import com.github.wolrab.boids.main.Config;
+import com.github.wolrab.boids.math.*;
 
 public class Boid extends GameObject {
 	Random rand;

@@ -1,4 +1,4 @@
-package com.github.wolrab.math;
+package com.github.wolrab.boids.math;
 
 public class Point2D {
 	public double x, y;

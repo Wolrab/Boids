@@ -1,10 +1,10 @@
-package com.github.wolrab.window;
+package com.github.wolrab.boids.window;
 
 import java.util.List;
 import java.awt.*;
 import javax.swing.*;
 
-import com.github.wolrab.components.GraphicsComponent;
+import com.github.wolrab.boids.components.GraphicsComponent;
 
 @SuppressWarnings("serial")
 public class DrawSurface extends JPanel {

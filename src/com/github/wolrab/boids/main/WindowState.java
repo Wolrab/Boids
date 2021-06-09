@@ -1,4 +1,4 @@
-package com.github.wolrab.main;
+package com.github.wolrab.boids.main;
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;

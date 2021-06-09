@@ -1,12 +1,12 @@
-package com.github.wolrab.window;
+package com.github.wolrab.boids.window;
 
 import java.awt.*;
 import java.awt.event.*;
 import java.util.List;
 import javax.swing.*;
 
-import com.github.wolrab.components.GraphicsComponent;
-import com.github.wolrab.math.Coordinates;
+import com.github.wolrab.boids.components.GraphicsComponent;
+import com.github.wolrab.boids.math.Coordinates;
 
 @SuppressWarnings("serial")
 public class Window extends JFrame {

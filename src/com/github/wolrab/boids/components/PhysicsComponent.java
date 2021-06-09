@@ -1,6 +1,6 @@
-package com.github.wolrab.components;
+package com.github.wolrab.boids.components;
 
-import com.github.wolrab.math.Vector2D;
+import com.github.wolrab.boids.math.Vector2D;
 
 public abstract class PhysicsComponent {
 	protected double maxVelocity, maxAcceleration;

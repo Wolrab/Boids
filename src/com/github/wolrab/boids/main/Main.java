@@ -1,10 +1,9 @@
-package com.github.wolrab.main;
+package com.github.wolrab.boids.main;
 
-import com.github.wolrab.swarm.BoidManager;
-import com.github.wolrab.window.Window;
+import com.github.wolrab.boids.swarm.BoidManager;
+import com.github.wolrab.boids.window.Window;
 
 public class Main {
-	// Easy hack to limit frames
 	private static class Timer implements Runnable {
 		@Override
 		public void run() {

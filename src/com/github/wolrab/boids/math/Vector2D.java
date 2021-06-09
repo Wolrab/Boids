@@ -1,4 +1,4 @@
-package com.github.wolrab.math;
+package com.github.wolrab.boids.math;
 
 /**
  * TRIGONOMETRY! We are sanitizing everything so the theta can only be between 0 and 2PI

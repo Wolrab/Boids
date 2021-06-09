@@ -1,6 +1,6 @@
-package com.github.wolrab.math;
+package com.github.wolrab.boids.math;
 
-import com.github.wolrab.main.Config;
+import com.github.wolrab.boids.main.Config;
 
 public final class Coordinates {
 	private static int windowWidth = Config.DEFAULT_WINDOW_WIDTH, windowHeight = Config.DEFAULT_WINDOW_HEIGHT;
